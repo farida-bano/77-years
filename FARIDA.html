@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14th August - Independence Day</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('5555.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            padding: 50px;
+            background: rgba(0, 100, 0, 0.7);
+            border-radius: 15px;
+            animation: slideIn 2s ease-in-out;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .image {
+            width: 220px;
+            height: auto;
+            animation: bounce 2s infinite;
+            filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.5));
+        }
+
+        .slogan {
+            font-size: 3.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            animation: blink 1.5s infinite alternate, pulse 3s infinite;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes blink {
+            from { opacity: 1; color: #ecc732; }
+            to { opacity: 0.6; color: #ffffff; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+        }
+
+        /* Star effects */
+        .star {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #ffdb4d;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 219, 77, 0.8);
+            animation: twinkle 3s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        /* Randomly positioned stars */
+        .star:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+        .star:nth-child(2) { top: 15%; left: 70%; animation-delay: 1s; }
+        .star:nth-child(3) { top: 30%; left: 40%; animation-delay: 2s; }
+        .star:nth-child(4) { top: 50%; left: 80%; animation-delay: 3s; }
+        .star:nth-child(5) { top: 70%; left: 10%; animation-delay: 4s; }
+        .star:nth-child(6) { top: 80%; left: 50%; animation-delay: 5s; }
+
+        /* Confetti effect */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ffffff;
+            animation: fall 3s infinite ease-in-out;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Generate multiple confetti */
+        .confetti:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .confetti:nth-child(2) { left: 20%; animation-delay: 0.5s; }
+        .confetti:nth-child(3) { left: 30%; animation-delay: 1s; }
+        .confetti:nth-child(4) { left: 40%; animation-delay: 1.5s; }
+        .confetti:nth-child(5) { left: 50%; animation-delay: 2s; }
+        .confetti:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+        .confetti:nth-child(7) { left: 70%; animation-delay: 3s; }
+        .confetti:nth-child(8) { left: 80%; animation-delay: 3.5s; }
+        .confetti:nth-child(9) { left: 90%; animation-delay: 4s; }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="atfi.mp3" type="atfi.mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="container">
+        <header>
+            <img src="quaid e azam.jpg" alt="Quaid-e-Azam" class="image">
+            <h1 class="slogan">🌹Happy Independence Day🌹 from Farida 🇵🇰 </h1>
+            <img src="0001.jpg" alt="Pakistani Flag" class="image">
+        </header>
+        <!-- Confetti elements -->
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <!-- Star elements -->
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+</body>
+</html>
